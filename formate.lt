@@ -1,0 +1,64 @@
+FA {
+
+  ### LAMMPS commands for initialization
+  ### (These can be overridden later.)
+
+
+  write_once("In Init") {
+    atom_style full
+  }
+
+  write_once("In Settings") {
+    pair_coeff @atom:HGR52 @atom:HGR52 0.04600000000000 1.60361769265261
+    pair_coeff @atom:CG2O3 @atom:CG2O3 0.07000000000000 3.56359487256136
+    pair_coeff @atom:OG2D2 @atom:OG2D2 0.12000000000000 3.02905564167715
+  }
+
+  write_once("In Settings") {
+    bond_coeff @bond:type1 238.000 1.1422
+    bond_coeff @bond:type2 525.000 1.2600
+  }
+
+  write_once("In Settings") {
+    angle_coeff @angle:type1 45.00000 116.00000 0.00000 0.00000
+    angle_coeff @angle:type2 100.00000 128.00000 70.00000 2.25870
+  }
+
+  write_once("In Settings") {
+    improper_coeff @improper:type1 67.000 0.00
+  }
+
+
+  ### DATA sections
+
+
+  write_once("Data Masses") {
+    @atom:HGR52 1.008
+    @atom:CG2O3 12.011
+    @atom:OG2D2 15.999
+  }
+
+  write("Data Atoms") {
+    $atom:CG2O3 $mol:m1 @atom:CG2O3 0.520 -1.86835421 48.81888110 56.63325338
+    $atom:OG2D2_1 $mol:m1 @atom:OG2D2 -0.760 -0.99726087 49.66389509 56.04082641
+    $atom:OG2D2_2 $mol:m1 @atom:OG2D2 -0.760 -2.63063174 48.07980608 56.04787734
+    $atom:HGR52 $mol:m1 @atom:HGR52 -0.000 -1.77762306 48.90649875 57.72216909
+  }
+
+  write("Data Bonds") {
+    $bond:id1 @bond:type2 $atom:CG2O3 $atom:OG2D2_1
+    $bond:id2 @bond:type2 $atom:CG2O3 $atom:OG2D2_2
+    $bond:id3 @bond:type1 $atom:CG2O3 $atom:HGR52
+  }
+
+  write("Data Angles") {
+    $angle:id1 @angle:type2 $atom:OG2D2_1 $atom:CG2O3 $atom:OG2D2_2
+    $angle:id2 @angle:type1 $atom:OG2D2_1 $atom:CG2O3 $atom:HGR52
+    $angle:id3 @angle:type1 $atom:OG2D2_2 $atom:CG2O3 $atom:HGR52
+  }
+
+  write("Data Impropers") {
+    $improper:id1 @improper:type1 $atom:CG2O3 $atom:OG2D2_1 $atom:OG2D2_2 $atom:HGR52
+  }
+
+} # end of "FA" type definition
