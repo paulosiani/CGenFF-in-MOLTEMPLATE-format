@@ -1,0 +1,709 @@
+PEG {
+  ### LAMMPS commands for initialization
+  ### (These can be overridden later.)
+
+
+write_once("In Init") {
+  atom_style full
+}
+
+write_once("In Settings") {
+  bond_coeff @bond:type1 200.000 1.5220
+  bond_coeff @bond:type2 525.000 1.2600
+  bond_coeff @bond:type3 222.500 1.5300
+  bond_coeff @bond:type4 222.500 1.5300
+  bond_coeff @bond:type5 309.000 1.1110
+  bond_coeff @bond:type6 360.000 1.4150
+  bond_coeff @bond:type7 284.500 1.1000
+  bond_coeff @bond:type8 200.000 1.4900
+  bond_coeff @bond:type9 403.000 1.0400
+}
+
+write_once("In Settings") {
+  angle_coeff @angle:type1 33.00000 109.50000 30.00000 2.16300
+  angle_coeff @angle:type2 63.00000 109.00000 0.00000 0.00000
+  angle_coeff @angle:type3 40.00000 116.00000 50.00000 2.35300
+  angle_coeff @angle:type4 26.50000 110.10000 22.53000 2.17900
+  angle_coeff @angle:type5 45.00000 111.50000 0.00000 0.00000
+  angle_coeff @angle:type6 26.50000 111.80000 22.53000 2.17900
+  angle_coeff @angle:type7 67.70000 110.00000 0.00000 0.00000
+  angle_coeff @angle:type8 95.00000 109.70000 0.00000 0.00000
+  angle_coeff @angle:type9 26.50000 110.10000 22.53000 2.17900
+  angle_coeff @angle:type10 75.70000 110.10000 0.00000 0.00000
+  angle_coeff @angle:type11 30.00000 109.50000 20.00000 2.07400
+  angle_coeff @angle:type12 35.50000 109.00000 5.40000 1.80200
+  angle_coeff @angle:type13 35.50000 109.00000 5.40000 1.80200
+  angle_coeff @angle:type14 44.00000 109.50000 0.00000 0.00000
+  angle_coeff @angle:type15 45.00000 107.50000 35.00000 2.10100
+  angle_coeff @angle:type16 100.00000 128.00000 70.00000 2.25870
+  angle_coeff @angle:type17 45.90000 108.89000 0.00000 0.00000
+}
+
+write_once("In Settings") {
+  dihedral_coeff @dihedral:type1 0.2000 3 0 1.00
+  dihedral_coeff @dihedral:type2 0.5700 1 0 1.00
+  dihedral_coeff @dihedral:type3 0.2900 2 0 0.00
+  dihedral_coeff @dihedral:type4 0.4300 3 0 0.00
+  dihedral_coeff @dihedral:type5 0.1000 3 0 1.00
+  dihedral_coeff @dihedral:type6 0.5700 1 0 1.00
+  dihedral_coeff @dihedral:type7 0.2900 2 0 0.00
+  dihedral_coeff @dihedral:type8 0.4300 3 0 0.00
+  dihedral_coeff @dihedral:type9 0.2200 3 0 1.00
+  dihedral_coeff @dihedral:type10 0.1950 3 0 1.00
+  dihedral_coeff @dihedral:type11 0.1950 3 0 1.00
+  dihedral_coeff @dihedral:type12 0.2840 3 0 1.00
+  dihedral_coeff @dihedral:type13 0.1000 3 0 1.00
+  dihedral_coeff @dihedral:type14 0.0500 6 180 1.00
+  dihedral_coeff @dihedral:type15 1.2800 2 180 1.00
+  dihedral_coeff @dihedral:type16 0.1900 3 0 1.00
+  dihedral_coeff @dihedral:type17 0.2500 1 180 1.00
+  dihedral_coeff @dihedral:type18 1.2400 2 0 0.00
+  dihedral_coeff @dihedral:type19 0.1900 3 0 1.00
+  dihedral_coeff @dihedral:type20 0.7000 1 180 1.00
+}
+
+write_once("In Settings") {
+  improper_coeff @improper:type1 96.000 0.00
+}
+
+
+  ### DATA sections
+
+
+write_once("Data Masses") {
+  @atom:HGA2 1.008
+  @atom:HGP2 1.008
+  @atom:CG2O3 12.011
+  @atom:CG321 12.011
+  @atom:CG324 12.011
+  @atom:NG3P3 14.007
+  @atom:OG2D2 15.999
+  @atom:OG301 15.999
+}
+
+write("Data Atoms") {
+  $atom:NG3P3 $mol:m1 @atom:NG3P3 -0.293000 -2.117439 48.374134 102.021729
+  $atom:CG324 $mol:m1 @atom:CG324 0.127000 -1.540218 48.958450 100.783157
+  $atom:CG321_1 $mol:m1 @atom:CG321 -0.007000 -2.175370 48.325932 99.554115
+  $atom:OG301_1 $mol:m1 @atom:OG301 -0.342000 -1.606292 48.901768 98.406799
+  $atom:CG321_2 $mol:m1 @atom:CG321 -0.009000 -2.166271 48.344501 97.237396
+  $atom:CG321_3 $mol:m1 @atom:CG321 -0.009000 -1.546233 48.971767 96.003418
+  $atom:OG301_2 $mol:m1 @atom:OG301 -0.342000 -2.121546 48.398941 94.853928
+  $atom:CG321_4 $mol:m1 @atom:CG321 -0.009000 -1.567292 48.959972 93.686699
+  $atom:CG321_5 $mol:m1 @atom:CG321 -0.009000 -2.199625 48.330250 92.460815
+  $atom:OG301_3 $mol:m1 @atom:OG301 -0.342000 -1.640441 48.896225 91.299644
+  $atom:CG321_6 $mol:m1 @atom:CG321 -0.009000 -2.209442 48.329762 90.143982
+  $atom:CG321_7 $mol:m1 @atom:CG321 -0.009000 -1.589399 48.957123 88.910126
+  $atom:OG301_4 $mol:m1 @atom:OG301 -0.342000 -2.159085 48.389904 87.755531
+  $atom:CG321_8 $mol:m1 @atom:CG321 -0.009000 -1.601306 48.954494 86.594315
+  $atom:CG321_9 $mol:m1 @atom:CG321 -0.009000 -2.232293 48.326183 85.369278
+  $atom:OG301_5 $mol:m1 @atom:OG301 -0.342000 -1.673787 48.891449 84.207092
+  $atom:CG321_10 $mol:m1 @atom:CG321 -0.009000 -2.243447 48.324261 83.052536
+  $atom:CG321_11 $mol:m1 @atom:CG321 -0.009000 -1.624188 48.950867 81.819702
+  $atom:OG301_6 $mol:m1 @atom:OG301 -0.342000 -2.193869 48.383675 80.665192
+  $atom:CG321_12 $mol:m1 @atom:CG321 -0.009000 -1.635350 48.948956 79.504013
+  $atom:CG321_13 $mol:m1 @atom:CG321 -0.009000 -2.266977 48.319950 78.279739
+  $atom:OG301_7 $mol:m1 @atom:OG301 -0.342000 -1.709205 48.884472 77.117752
+  $atom:CG321_14 $mol:m1 @atom:CG321 -0.009000 -2.278125 48.318031 75.963120
+  $atom:CG321_15 $mol:m1 @atom:CG321 -0.009000 -1.658880 48.944553 74.730339
+  $atom:OG301_8 $mol:m1 @atom:OG301 -0.342000 -2.228612 48.377441 73.575592
+  $atom:CG321_16 $mol:m1 @atom:CG321 -0.009000 -1.670126 48.942692 72.414642
+  $atom:CG321_17 $mol:m1 @atom:CG321 -0.009000 -2.301735 48.313694 71.190475
+  $atom:OG301_9 $mol:m1 @atom:OG301 -0.342000 -1.742514 48.879665 70.030212
+  $atom:CG321_18 $mol:m1 @atom:CG321 -0.009000 -2.312907 48.311775 68.875626
+  $atom:CG321_19 $mol:m1 @atom:CG321 -0.009000 -1.692226 48.939762 67.644928
+  $atom:OG301_10 $mol:m1 @atom:OG301 -0.342000 -2.264770 48.369812 66.492355
+  $atom:CG321_20 $mol:m1 @atom:CG321 -0.009000 -1.707626 48.933632 65.331039
+  $atom:CG321_21 $mol:m1 @atom:CG321 -0.009000 -2.337143 48.306782 64.107048
+  $atom:OG301_11 $mol:m1 @atom:OG301 -0.342000 -1.768078 48.882584 62.957752
+  $atom:CG321_22 $mol:m1 @atom:CG321 -0.009000 -2.327332 48.325970 61.793236
+  $atom:CG321_23 $mol:m1 @atom:CG321 0.016000 -1.708042 48.952526 60.561420
+  $atom:OG301_12 $mol:m1 @atom:OG301 -0.417000 -2.303601 48.359322 59.436676
+  $atom:CG321_24 $mol:m1 @atom:CG321 0.043000 -1.782414 48.887352 58.219917
+  $atom:CG2O3 $mol:m1 @atom:CG2O3 0.518000 -1.892289 48.796215 56.674065
+  $atom:OG2D2_1 $mol:m1 @atom:OG2D2 -0.760000 -0.991322 49.441494 56.083916
+  $atom:OG2D2_2 $mol:m1 @atom:OG2D2 -0.760000 -2.666417 47.951805 56.178402
+  $atom:HGP2_1 $mol:m1 @atom:HGP2 0.328000 -2.043190 47.343719 102.015358
+  $atom:HGP2_2 $mol:m1 @atom:HGP2 0.328000 -3.111702 48.648190 102.133263
+  $atom:HGP2_3 $mol:m1 @atom:HGP2 0.328000 -1.613522 48.723106 102.857422
+  $atom:HGA2_1 $mol:m1 @atom:HGA2 0.090000 -0.465805 48.749023 100.779053
+  $atom:HGA2_2 $mol:m1 @atom:HGA2 0.090000 -1.697469 50.042118 100.801720
+  $atom:HGA2_3 $mol:m1 @atom:HGA2 0.090000 -3.264540 48.516396 99.542442
+  $atom:HGA2_4 $mol:m1 @atom:HGA2 0.090000 -1.999161 47.234661 99.533287
+  $atom:HGA2_5 $mol:m1 @atom:HGA2 0.090000 -3.256157 48.518761 97.233536
+  $atom:HGA2_6 $mol:m1 @atom:HGA2 0.090000 -1.980183 47.254543 97.222496
+  $atom:HGA2_7 $mol:m1 @atom:HGA2 0.090000 -0.454219 48.791111 96.006111
+  $atom:HGA2_8 $mol:m1 @atom:HGA2 0.090000 -1.729469 50.060268 96.012360
+  $atom:HGA2_9 $mol:m1 @atom:HGA2 0.090000 -0.478090 48.768127 93.670654
+  $atom:HGA2_10 $mol:m1 @atom:HGA2 0.090000 -1.749176 50.049980 93.675797
+  $atom:HGA2_11 $mol:m1 @atom:HGA2 0.090000 -3.292229 48.501728 92.478897
+  $atom:HGA2_12 $mol:m1 @atom:HGA2 0.090000 -2.006428 47.241707 92.474670
+  $atom:HGA2_13 $mol:m1 @atom:HGA2 0.090000 -3.300065 48.511803 90.135239
+  $atom:HGA2_14 $mol:m1 @atom:HGA2 0.090000 -2.038085 47.239120 90.136078
+  $atom:HGA2_15 $mol:m1 @atom:HGA2 0.090000 -0.496746 48.785591 88.912033
+  $atom:HGA2_16 $mol:m1 @atom:HGA2 0.090000 -1.774047 50.046989 88.917084
+  $atom:HGA2_17 $mol:m1 @atom:HGA2 0.090000 -0.509358 48.778118 86.578186
+  $atom:HGA2_18 $mol:m1 @atom:HGA2 0.090000 -1.776940 50.046547 86.580330
+  $atom:HGA2_19 $mol:m1 @atom:HGA2 0.090000 -3.322173 48.511692 85.386345
+  $atom:HGA2_20 $mol:m1 @atom:HGA2 0.090000 -2.053789 47.238266 85.385315
+  $atom:HGA2_21 $mol:m1 @atom:HGA2 0.090000 -3.334111 48.510483 83.046799
+  $atom:HGA2_22 $mol:m1 @atom:HGA2 0.090000 -2.066551 47.233635 83.038620
+  $atom:HGA2_23 $mol:m1 @atom:HGA2 0.090000 -0.539856 48.745663 81.809570
+  $atom:HGA2_24 $mol:m1 @atom:HGA2 0.090000 -1.791255 50.044342 81.829544
+  $atom:HGA2_25 $mol:m1 @atom:HGA2 0.090000 -0.542706 48.774635 79.486732
+  $atom:HGA2_26 $mol:m1 @atom:HGA2 0.090000 -1.824329 50.038849 79.494934
+  $atom:HGA2_27 $mol:m1 @atom:HGA2 0.090000 -3.358213 48.492794 78.298973
+  $atom:HGA2_28 $mol:m1 @atom:HGA2 0.090000 -2.071002 47.231445 78.291992
+  $atom:HGA2_29 $mol:m1 @atom:HGA2 0.090000 -3.371633 48.477612 75.955414
+  $atom:HGA2_30 $mol:m1 @atom:HGA2 0.090000 -2.078131 47.229549 75.948242
+  $atom:HGA2_31 $mol:m1 @atom:HGA2 0.090000 -0.570325 48.743622 74.736099
+  $atom:HGA2_32 $mol:m1 @atom:HGA2 0.090000 -1.828792 50.036690 74.738159
+  $atom:HGA2_33 $mol:m1 @atom:HGA2 0.090000 -0.579514 48.759277 72.398392
+  $atom:HGA2_34 $mol:m1 @atom:HGA2 0.090000 -1.848485 50.033367 72.403397
+  $atom:HGA2_35 $mol:m1 @atom:HGA2 0.090000 -3.392317 48.498520 71.204620
+  $atom:HGA2_36 $mol:m1 @atom:HGA2 0.090000 -2.132441 47.222309 71.201439
+  $atom:HGA2_37 $mol:m1 @atom:HGA2 0.090000 -3.402944 48.495899 68.871948
+  $atom:HGA2_38 $mol:m1 @atom:HGA2 0.090000 -2.133215 47.221142 68.867767
+  $atom:HGA2_39 $mol:m1 @atom:HGA2 0.090000 -0.599461 48.768288 67.650642
+  $atom:HGA2_40 $mol:m1 @atom:HGA2 0.090000 -1.872697 50.031052 67.652649
+  $atom:HGA2_41 $mol:m1 @atom:HGA2 0.090000 -0.621296 48.741779 65.330795
+  $atom:HGA2_42 $mol:m1 @atom:HGA2 0.090000 -1.891650 50.022873 65.321060
+  $atom:HGA2_43 $mol:m1 @atom:HGA2 0.090000 -3.427733 48.493004 64.113167
+  $atom:HGA2_44 $mol:m1 @atom:HGA2 0.090000 -2.159529 47.215420 64.105064
+  $atom:HGA2_45 $mol:m1 @atom:HGA2 0.090000 -3.416502 48.515068 61.778534
+  $atom:HGA2_46 $mol:m1 @atom:HGA2 0.090000 -2.156792 47.233223 61.771389
+  $atom:HGA2_47 $mol:m1 @atom:HGA2 0.090000 -0.616728 48.775425 60.553314
+  $atom:HGA2_48 $mol:m1 @atom:HGA2 0.090000 -1.903983 50.041046 60.562424
+  $atom:HGA2_49 $mol:m1 @atom:HGA2 0.090000 -0.695409 48.697662 58.186909
+  $atom:HGA2_50 $mol:m1 @atom:HGA2 0.090000 -1.958776 49.974548 58.192966
+}
+
+write("Data Bonds") {
+  $bond:id1 @bond:type8 $atom:NG3P3 $atom:CG324
+  $bond:id2 @bond:type9 $atom:NG3P3 $atom:HGP2_1
+  $bond:id3 @bond:type9 $atom:NG3P3 $atom:HGP2_2
+  $bond:id4 @bond:type9 $atom:NG3P3 $atom:HGP2_3
+  $bond:id5 @bond:type4 $atom:CG324 $atom:CG321_1
+  $bond:id6 @bond:type7 $atom:CG324 $atom:HGA2_1
+  $bond:id7 @bond:type7 $atom:CG324 $atom:HGA2_2
+  $bond:id8 @bond:type6 $atom:CG321_1 $atom:OG301_1
+  $bond:id9 @bond:type5 $atom:CG321_1 $atom:HGA2_3
+  $bond:id10 @bond:type5 $atom:CG321_1 $atom:HGA2_4
+  $bond:id11 @bond:type6 $atom:OG301_1 $atom:CG321_2
+  $bond:id12 @bond:type3 $atom:CG321_2 $atom:CG321_3
+  $bond:id13 @bond:type5 $atom:CG321_2 $atom:HGA2_5
+  $bond:id14 @bond:type5 $atom:CG321_2 $atom:HGA2_6
+  $bond:id15 @bond:type6 $atom:CG321_3 $atom:OG301_2
+  $bond:id16 @bond:type5 $atom:CG321_3 $atom:HGA2_7
+  $bond:id17 @bond:type5 $atom:CG321_3 $atom:HGA2_8
+  $bond:id18 @bond:type6 $atom:OG301_2 $atom:CG321_4
+  $bond:id19 @bond:type3 $atom:CG321_4 $atom:CG321_5
+  $bond:id20 @bond:type5 $atom:CG321_4 $atom:HGA2_9
+  $bond:id21 @bond:type5 $atom:CG321_4 $atom:HGA2_10
+  $bond:id22 @bond:type6 $atom:CG321_5 $atom:OG301_3
+  $bond:id23 @bond:type5 $atom:CG321_5 $atom:HGA2_11
+  $bond:id24 @bond:type5 $atom:CG321_5 $atom:HGA2_12
+  $bond:id25 @bond:type6 $atom:OG301_3 $atom:CG321_6
+  $bond:id26 @bond:type3 $atom:CG321_6 $atom:CG321_7
+  $bond:id27 @bond:type5 $atom:CG321_6 $atom:HGA2_13
+  $bond:id28 @bond:type5 $atom:CG321_6 $atom:HGA2_14
+  $bond:id29 @bond:type6 $atom:CG321_7 $atom:OG301_4
+  $bond:id30 @bond:type5 $atom:CG321_7 $atom:HGA2_15
+  $bond:id31 @bond:type5 $atom:CG321_7 $atom:HGA2_16
+  $bond:id32 @bond:type6 $atom:OG301_4 $atom:CG321_8
+  $bond:id33 @bond:type3 $atom:CG321_8 $atom:CG321_9
+  $bond:id34 @bond:type5 $atom:CG321_8 $atom:HGA2_17
+  $bond:id35 @bond:type5 $atom:CG321_8 $atom:HGA2_18
+  $bond:id36 @bond:type6 $atom:CG321_9 $atom:OG301_5
+  $bond:id37 @bond:type5 $atom:CG321_9 $atom:HGA2_19
+  $bond:id38 @bond:type5 $atom:CG321_9 $atom:HGA2_20
+  $bond:id39 @bond:type6 $atom:OG301_5 $atom:CG321_10
+  $bond:id40 @bond:type3 $atom:CG321_10 $atom:CG321_11
+  $bond:id41 @bond:type5 $atom:CG321_10 $atom:HGA2_21
+  $bond:id42 @bond:type5 $atom:CG321_10 $atom:HGA2_22
+  $bond:id43 @bond:type6 $atom:CG321_11 $atom:OG301_6
+  $bond:id44 @bond:type5 $atom:CG321_11 $atom:HGA2_23
+  $bond:id45 @bond:type5 $atom:CG321_11 $atom:HGA2_24
+  $bond:id46 @bond:type6 $atom:OG301_6 $atom:CG321_12
+  $bond:id47 @bond:type3 $atom:CG321_12 $atom:CG321_13
+  $bond:id48 @bond:type5 $atom:CG321_12 $atom:HGA2_25
+  $bond:id49 @bond:type5 $atom:CG321_12 $atom:HGA2_26
+  $bond:id50 @bond:type6 $atom:CG321_13 $atom:OG301_7
+  $bond:id51 @bond:type5 $atom:CG321_13 $atom:HGA2_27
+  $bond:id52 @bond:type5 $atom:CG321_13 $atom:HGA2_28
+  $bond:id53 @bond:type6 $atom:OG301_7 $atom:CG321_14
+  $bond:id54 @bond:type3 $atom:CG321_14 $atom:CG321_15
+  $bond:id55 @bond:type5 $atom:CG321_14 $atom:HGA2_29
+  $bond:id56 @bond:type5 $atom:CG321_14 $atom:HGA2_30
+  $bond:id57 @bond:type6 $atom:CG321_15 $atom:OG301_8
+  $bond:id58 @bond:type5 $atom:CG321_15 $atom:HGA2_31
+  $bond:id59 @bond:type5 $atom:CG321_15 $atom:HGA2_32
+  $bond:id60 @bond:type6 $atom:OG301_8 $atom:CG321_16
+  $bond:id61 @bond:type3 $atom:CG321_16 $atom:CG321_17
+  $bond:id62 @bond:type5 $atom:CG321_16 $atom:HGA2_33
+  $bond:id63 @bond:type5 $atom:CG321_16 $atom:HGA2_34
+  $bond:id64 @bond:type6 $atom:CG321_17 $atom:OG301_9
+  $bond:id65 @bond:type5 $atom:CG321_17 $atom:HGA2_35
+  $bond:id66 @bond:type5 $atom:CG321_17 $atom:HGA2_36
+  $bond:id67 @bond:type6 $atom:OG301_9 $atom:CG321_18
+  $bond:id68 @bond:type3 $atom:CG321_18 $atom:CG321_19
+  $bond:id69 @bond:type5 $atom:CG321_18 $atom:HGA2_37
+  $bond:id70 @bond:type5 $atom:CG321_18 $atom:HGA2_38
+  $bond:id71 @bond:type6 $atom:CG321_19 $atom:OG301_10
+  $bond:id72 @bond:type5 $atom:CG321_19 $atom:HGA2_39
+  $bond:id73 @bond:type5 $atom:CG321_19 $atom:HGA2_40
+  $bond:id74 @bond:type6 $atom:OG301_10 $atom:CG321_20
+  $bond:id75 @bond:type3 $atom:CG321_20 $atom:CG321_21
+  $bond:id76 @bond:type5 $atom:CG321_20 $atom:HGA2_41
+  $bond:id77 @bond:type5 $atom:CG321_20 $atom:HGA2_42
+  $bond:id78 @bond:type6 $atom:CG321_21 $atom:OG301_11
+  $bond:id79 @bond:type5 $atom:CG321_21 $atom:HGA2_43
+  $bond:id80 @bond:type5 $atom:CG321_21 $atom:HGA2_44
+  $bond:id81 @bond:type6 $atom:OG301_11 $atom:CG321_22
+  $bond:id82 @bond:type3 $atom:CG321_22 $atom:CG321_23
+  $bond:id83 @bond:type5 $atom:CG321_22 $atom:HGA2_45
+  $bond:id84 @bond:type5 $atom:CG321_22 $atom:HGA2_46
+  $bond:id85 @bond:type6 $atom:CG321_23 $atom:OG301_12
+  $bond:id86 @bond:type5 $atom:CG321_23 $atom:HGA2_47
+  $bond:id87 @bond:type5 $atom:CG321_23 $atom:HGA2_48
+  $bond:id88 @bond:type6 $atom:OG301_12 $atom:CG321_24
+  $bond:id89 @bond:type1 $atom:CG321_24 $atom:CG2O3
+  $bond:id90 @bond:type5 $atom:CG321_24 $atom:HGA2_49
+  $bond:id91 @bond:type5 $atom:CG321_24 $atom:HGA2_50
+  $bond:id92 @bond:type2 $atom:CG2O3 $atom:OG2D2_1
+  $bond:id93 @bond:type2 $atom:CG2O3 $atom:OG2D2_2
+}
+
+write("Data Angles") {
+  $angle:id1 @angle:type11 $atom:CG324 $atom:NG3P3 $atom:HGP2_1
+  $angle:id2 @angle:type11 $atom:CG324 $atom:NG3P3 $atom:HGP2_2
+  $angle:id3 @angle:type11 $atom:CG324 $atom:NG3P3 $atom:HGP2_3
+  $angle:id4 @angle:type14 $atom:HGP2_1 $atom:NG3P3 $atom:HGP2_2
+  $angle:id5 @angle:type14 $atom:HGP2_1 $atom:NG3P3 $atom:HGP2_3
+  $angle:id6 @angle:type14 $atom:HGP2_2 $atom:NG3P3 $atom:HGP2_3
+  $angle:id7 @angle:type7 $atom:NG3P3 $atom:CG324 $atom:CG321_1
+  $angle:id8 @angle:type15 $atom:NG3P3 $atom:CG324 $atom:HGA2_1
+  $angle:id9 @angle:type15 $atom:NG3P3 $atom:CG324 $atom:HGA2_2
+  $angle:id10 @angle:type6 $atom:CG321_1 $atom:CG324 $atom:HGA2_1
+  $angle:id11 @angle:type6 $atom:CG321_1 $atom:CG324 $atom:HGA2_2
+  $angle:id12 @angle:type13 $atom:HGA2_1 $atom:CG324 $atom:HGA2_2
+  $angle:id13 @angle:type10 $atom:CG324 $atom:CG321_1 $atom:OG301_1
+  $angle:id14 @angle:type9 $atom:CG324 $atom:CG321_1 $atom:HGA2_3
+  $angle:id15 @angle:type9 $atom:CG324 $atom:CG321_1 $atom:HGA2_4
+  $angle:id16 @angle:type17 $atom:OG301_1 $atom:CG321_1 $atom:HGA2_3
+  $angle:id17 @angle:type17 $atom:OG301_1 $atom:CG321_1 $atom:HGA2_4
+  $angle:id18 @angle:type12 $atom:HGA2_3 $atom:CG321_1 $atom:HGA2_4
+  $angle:id19 @angle:type8 $atom:CG321_1 $atom:OG301_1 $atom:CG321_2
+  $angle:id20 @angle:type5 $atom:OG301_1 $atom:CG321_2 $atom:CG321_3
+  $angle:id21 @angle:type17 $atom:OG301_1 $atom:CG321_2 $atom:HGA2_5
+  $angle:id22 @angle:type17 $atom:OG301_1 $atom:CG321_2 $atom:HGA2_6
+  $angle:id23 @angle:type4 $atom:CG321_3 $atom:CG321_2 $atom:HGA2_5
+  $angle:id24 @angle:type4 $atom:CG321_3 $atom:CG321_2 $atom:HGA2_6
+  $angle:id25 @angle:type12 $atom:HGA2_5 $atom:CG321_2 $atom:HGA2_6
+  $angle:id26 @angle:type5 $atom:CG321_2 $atom:CG321_3 $atom:OG301_2
+  $angle:id27 @angle:type4 $atom:CG321_2 $atom:CG321_3 $atom:HGA2_7
+  $angle:id28 @angle:type4 $atom:CG321_2 $atom:CG321_3 $atom:HGA2_8
+  $angle:id29 @angle:type17 $atom:OG301_2 $atom:CG321_3 $atom:HGA2_7
+  $angle:id30 @angle:type17 $atom:OG301_2 $atom:CG321_3 $atom:HGA2_8
+  $angle:id31 @angle:type12 $atom:HGA2_7 $atom:CG321_3 $atom:HGA2_8
+  $angle:id32 @angle:type8 $atom:CG321_3 $atom:OG301_2 $atom:CG321_4
+  $angle:id33 @angle:type5 $atom:OG301_2 $atom:CG321_4 $atom:CG321_5
+  $angle:id34 @angle:type17 $atom:OG301_2 $atom:CG321_4 $atom:HGA2_9
+  $angle:id35 @angle:type17 $atom:OG301_2 $atom:CG321_4 $atom:HGA2_10
+  $angle:id36 @angle:type4 $atom:CG321_5 $atom:CG321_4 $atom:HGA2_9
+  $angle:id37 @angle:type4 $atom:CG321_5 $atom:CG321_4 $atom:HGA2_10
+  $angle:id38 @angle:type12 $atom:HGA2_9 $atom:CG321_4 $atom:HGA2_10
+  $angle:id39 @angle:type5 $atom:CG321_4 $atom:CG321_5 $atom:OG301_3
+  $angle:id40 @angle:type4 $atom:CG321_4 $atom:CG321_5 $atom:HGA2_11
+  $angle:id41 @angle:type4 $atom:CG321_4 $atom:CG321_5 $atom:HGA2_12
+  $angle:id42 @angle:type17 $atom:OG301_3 $atom:CG321_5 $atom:HGA2_11
+  $angle:id43 @angle:type17 $atom:OG301_3 $atom:CG321_5 $atom:HGA2_12
+  $angle:id44 @angle:type12 $atom:HGA2_11 $atom:CG321_5 $atom:HGA2_12
+  $angle:id45 @angle:type8 $atom:CG321_5 $atom:OG301_3 $atom:CG321_6
+  $angle:id46 @angle:type5 $atom:OG301_3 $atom:CG321_6 $atom:CG321_7
+  $angle:id47 @angle:type17 $atom:OG301_3 $atom:CG321_6 $atom:HGA2_13
+  $angle:id48 @angle:type17 $atom:OG301_3 $atom:CG321_6 $atom:HGA2_14
+  $angle:id49 @angle:type4 $atom:CG321_7 $atom:CG321_6 $atom:HGA2_13
+  $angle:id50 @angle:type4 $atom:CG321_7 $atom:CG321_6 $atom:HGA2_14
+  $angle:id51 @angle:type12 $atom:HGA2_13 $atom:CG321_6 $atom:HGA2_14
+  $angle:id52 @angle:type5 $atom:CG321_6 $atom:CG321_7 $atom:OG301_4
+  $angle:id53 @angle:type4 $atom:CG321_6 $atom:CG321_7 $atom:HGA2_15
+  $angle:id54 @angle:type4 $atom:CG321_6 $atom:CG321_7 $atom:HGA2_16
+  $angle:id55 @angle:type17 $atom:OG301_4 $atom:CG321_7 $atom:HGA2_15
+  $angle:id56 @angle:type17 $atom:OG301_4 $atom:CG321_7 $atom:HGA2_16
+  $angle:id57 @angle:type12 $atom:HGA2_15 $atom:CG321_7 $atom:HGA2_16
+  $angle:id58 @angle:type8 $atom:CG321_7 $atom:OG301_4 $atom:CG321_8
+  $angle:id59 @angle:type5 $atom:OG301_4 $atom:CG321_8 $atom:CG321_9
+  $angle:id60 @angle:type17 $atom:OG301_4 $atom:CG321_8 $atom:HGA2_17
+  $angle:id61 @angle:type17 $atom:OG301_4 $atom:CG321_8 $atom:HGA2_18
+  $angle:id62 @angle:type4 $atom:CG321_9 $atom:CG321_8 $atom:HGA2_17
+  $angle:id63 @angle:type4 $atom:CG321_9 $atom:CG321_8 $atom:HGA2_18
+  $angle:id64 @angle:type12 $atom:HGA2_17 $atom:CG321_8 $atom:HGA2_18
+  $angle:id65 @angle:type5 $atom:CG321_8 $atom:CG321_9 $atom:OG301_5
+  $angle:id66 @angle:type4 $atom:CG321_8 $atom:CG321_9 $atom:HGA2_19
+  $angle:id67 @angle:type4 $atom:CG321_8 $atom:CG321_9 $atom:HGA2_20
+  $angle:id68 @angle:type17 $atom:OG301_5 $atom:CG321_9 $atom:HGA2_19
+  $angle:id69 @angle:type17 $atom:OG301_5 $atom:CG321_9 $atom:HGA2_20
+  $angle:id70 @angle:type12 $atom:HGA2_19 $atom:CG321_9 $atom:HGA2_20
+  $angle:id71 @angle:type8 $atom:CG321_9 $atom:OG301_5 $atom:CG321_10
+  $angle:id72 @angle:type5 $atom:OG301_5 $atom:CG321_10 $atom:CG321_11
+  $angle:id73 @angle:type17 $atom:OG301_5 $atom:CG321_10 $atom:HGA2_21
+  $angle:id74 @angle:type17 $atom:OG301_5 $atom:CG321_10 $atom:HGA2_22
+  $angle:id75 @angle:type4 $atom:CG321_11 $atom:CG321_10 $atom:HGA2_21
+  $angle:id76 @angle:type4 $atom:CG321_11 $atom:CG321_10 $atom:HGA2_22
+  $angle:id77 @angle:type12 $atom:HGA2_21 $atom:CG321_10 $atom:HGA2_22
+  $angle:id78 @angle:type5 $atom:CG321_10 $atom:CG321_11 $atom:OG301_6
+  $angle:id79 @angle:type4 $atom:CG321_10 $atom:CG321_11 $atom:HGA2_23
+  $angle:id80 @angle:type4 $atom:CG321_10 $atom:CG321_11 $atom:HGA2_24
+  $angle:id81 @angle:type17 $atom:OG301_6 $atom:CG321_11 $atom:HGA2_23
+  $angle:id82 @angle:type17 $atom:OG301_6 $atom:CG321_11 $atom:HGA2_24
+  $angle:id83 @angle:type12 $atom:HGA2_23 $atom:CG321_11 $atom:HGA2_24
+  $angle:id84 @angle:type8 $atom:CG321_11 $atom:OG301_6 $atom:CG321_12
+  $angle:id85 @angle:type5 $atom:OG301_6 $atom:CG321_12 $atom:CG321_13
+  $angle:id86 @angle:type17 $atom:OG301_6 $atom:CG321_12 $atom:HGA2_25
+  $angle:id87 @angle:type17 $atom:OG301_6 $atom:CG321_12 $atom:HGA2_26
+  $angle:id88 @angle:type4 $atom:CG321_13 $atom:CG321_12 $atom:HGA2_25
+  $angle:id89 @angle:type4 $atom:CG321_13 $atom:CG321_12 $atom:HGA2_26
+  $angle:id90 @angle:type12 $atom:HGA2_25 $atom:CG321_12 $atom:HGA2_26
+  $angle:id91 @angle:type5 $atom:CG321_12 $atom:CG321_13 $atom:OG301_7
+  $angle:id92 @angle:type4 $atom:CG321_12 $atom:CG321_13 $atom:HGA2_27
+  $angle:id93 @angle:type4 $atom:CG321_12 $atom:CG321_13 $atom:HGA2_28
+  $angle:id94 @angle:type17 $atom:OG301_7 $atom:CG321_13 $atom:HGA2_27
+  $angle:id95 @angle:type17 $atom:OG301_7 $atom:CG321_13 $atom:HGA2_28
+  $angle:id96 @angle:type12 $atom:HGA2_27 $atom:CG321_13 $atom:HGA2_28
+  $angle:id97 @angle:type8 $atom:CG321_13 $atom:OG301_7 $atom:CG321_14
+  $angle:id98 @angle:type5 $atom:OG301_7 $atom:CG321_14 $atom:CG321_15
+  $angle:id99 @angle:type17 $atom:OG301_7 $atom:CG321_14 $atom:HGA2_29
+  $angle:id100 @angle:type17 $atom:OG301_7 $atom:CG321_14 $atom:HGA2_30
+  $angle:id101 @angle:type4 $atom:CG321_15 $atom:CG321_14 $atom:HGA2_29
+  $angle:id102 @angle:type4 $atom:CG321_15 $atom:CG321_14 $atom:HGA2_30
+  $angle:id103 @angle:type12 $atom:HGA2_29 $atom:CG321_14 $atom:HGA2_30
+  $angle:id104 @angle:type5 $atom:CG321_14 $atom:CG321_15 $atom:OG301_8
+  $angle:id105 @angle:type4 $atom:CG321_14 $atom:CG321_15 $atom:HGA2_31
+  $angle:id106 @angle:type4 $atom:CG321_14 $atom:CG321_15 $atom:HGA2_32
+  $angle:id107 @angle:type17 $atom:OG301_8 $atom:CG321_15 $atom:HGA2_31
+  $angle:id108 @angle:type17 $atom:OG301_8 $atom:CG321_15 $atom:HGA2_32
+  $angle:id109 @angle:type12 $atom:HGA2_31 $atom:CG321_15 $atom:HGA2_32
+  $angle:id110 @angle:type8 $atom:CG321_15 $atom:OG301_8 $atom:CG321_16
+  $angle:id111 @angle:type5 $atom:OG301_8 $atom:CG321_16 $atom:CG321_17
+  $angle:id112 @angle:type17 $atom:OG301_8 $atom:CG321_16 $atom:HGA2_33
+  $angle:id113 @angle:type17 $atom:OG301_8 $atom:CG321_16 $atom:HGA2_34
+  $angle:id114 @angle:type4 $atom:CG321_17 $atom:CG321_16 $atom:HGA2_33
+  $angle:id115 @angle:type4 $atom:CG321_17 $atom:CG321_16 $atom:HGA2_34
+  $angle:id116 @angle:type12 $atom:HGA2_33 $atom:CG321_16 $atom:HGA2_34
+  $angle:id117 @angle:type5 $atom:CG321_16 $atom:CG321_17 $atom:OG301_9
+  $angle:id118 @angle:type4 $atom:CG321_16 $atom:CG321_17 $atom:HGA2_35
+  $angle:id119 @angle:type4 $atom:CG321_16 $atom:CG321_17 $atom:HGA2_36
+  $angle:id120 @angle:type17 $atom:OG301_9 $atom:CG321_17 $atom:HGA2_35
+  $angle:id121 @angle:type17 $atom:OG301_9 $atom:CG321_17 $atom:HGA2_36
+  $angle:id122 @angle:type12 $atom:HGA2_35 $atom:CG321_17 $atom:HGA2_36
+  $angle:id123 @angle:type8 $atom:CG321_17 $atom:OG301_9 $atom:CG321_18
+  $angle:id124 @angle:type5 $atom:OG301_9 $atom:CG321_18 $atom:CG321_19
+  $angle:id125 @angle:type17 $atom:OG301_9 $atom:CG321_18 $atom:HGA2_37
+  $angle:id126 @angle:type17 $atom:OG301_9 $atom:CG321_18 $atom:HGA2_38
+  $angle:id127 @angle:type4 $atom:CG321_19 $atom:CG321_18 $atom:HGA2_37
+  $angle:id128 @angle:type4 $atom:CG321_19 $atom:CG321_18 $atom:HGA2_38
+  $angle:id129 @angle:type12 $atom:HGA2_37 $atom:CG321_18 $atom:HGA2_38
+  $angle:id130 @angle:type5 $atom:CG321_18 $atom:CG321_19 $atom:OG301_10
+  $angle:id131 @angle:type4 $atom:CG321_18 $atom:CG321_19 $atom:HGA2_39
+  $angle:id132 @angle:type4 $atom:CG321_18 $atom:CG321_19 $atom:HGA2_40
+  $angle:id133 @angle:type17 $atom:OG301_10 $atom:CG321_19 $atom:HGA2_39
+  $angle:id134 @angle:type17 $atom:OG301_10 $atom:CG321_19 $atom:HGA2_40
+  $angle:id135 @angle:type12 $atom:HGA2_39 $atom:CG321_19 $atom:HGA2_40
+  $angle:id136 @angle:type8 $atom:CG321_19 $atom:OG301_10 $atom:CG321_20
+  $angle:id137 @angle:type5 $atom:OG301_10 $atom:CG321_20 $atom:CG321_21
+  $angle:id138 @angle:type17 $atom:OG301_10 $atom:CG321_20 $atom:HGA2_41
+  $angle:id139 @angle:type17 $atom:OG301_10 $atom:CG321_20 $atom:HGA2_42
+  $angle:id140 @angle:type4 $atom:CG321_21 $atom:CG321_20 $atom:HGA2_41
+  $angle:id141 @angle:type4 $atom:CG321_21 $atom:CG321_20 $atom:HGA2_42
+  $angle:id142 @angle:type12 $atom:HGA2_41 $atom:CG321_20 $atom:HGA2_42
+  $angle:id143 @angle:type5 $atom:CG321_20 $atom:CG321_21 $atom:OG301_11
+  $angle:id144 @angle:type4 $atom:CG321_20 $atom:CG321_21 $atom:HGA2_43
+  $angle:id145 @angle:type4 $atom:CG321_20 $atom:CG321_21 $atom:HGA2_44
+  $angle:id146 @angle:type17 $atom:OG301_11 $atom:CG321_21 $atom:HGA2_43
+  $angle:id147 @angle:type17 $atom:OG301_11 $atom:CG321_21 $atom:HGA2_44
+  $angle:id148 @angle:type12 $atom:HGA2_43 $atom:CG321_21 $atom:HGA2_44
+  $angle:id149 @angle:type8 $atom:CG321_21 $atom:OG301_11 $atom:CG321_22
+  $angle:id150 @angle:type5 $atom:OG301_11 $atom:CG321_22 $atom:CG321_23
+  $angle:id151 @angle:type17 $atom:OG301_11 $atom:CG321_22 $atom:HGA2_45
+  $angle:id152 @angle:type17 $atom:OG301_11 $atom:CG321_22 $atom:HGA2_46
+  $angle:id153 @angle:type4 $atom:CG321_23 $atom:CG321_22 $atom:HGA2_45
+  $angle:id154 @angle:type4 $atom:CG321_23 $atom:CG321_22 $atom:HGA2_46
+  $angle:id155 @angle:type12 $atom:HGA2_45 $atom:CG321_22 $atom:HGA2_46
+  $angle:id156 @angle:type5 $atom:CG321_22 $atom:CG321_23 $atom:OG301_12
+  $angle:id157 @angle:type4 $atom:CG321_22 $atom:CG321_23 $atom:HGA2_47
+  $angle:id158 @angle:type4 $atom:CG321_22 $atom:CG321_23 $atom:HGA2_48
+  $angle:id159 @angle:type17 $atom:OG301_12 $atom:CG321_23 $atom:HGA2_47
+  $angle:id160 @angle:type17 $atom:OG301_12 $atom:CG321_23 $atom:HGA2_48
+  $angle:id161 @angle:type12 $atom:HGA2_47 $atom:CG321_23 $atom:HGA2_48
+  $angle:id162 @angle:type8 $atom:CG321_23 $atom:OG301_12 $atom:CG321_24
+  $angle:id163 @angle:type2 $atom:OG301_12 $atom:CG321_24 $atom:CG2O3
+  $angle:id164 @angle:type17 $atom:OG301_12 $atom:CG321_24 $atom:HGA2_49
+  $angle:id165 @angle:type17 $atom:OG301_12 $atom:CG321_24 $atom:HGA2_50
+  $angle:id166 @angle:type1 $atom:CG2O3 $atom:CG321_24 $atom:HGA2_49
+  $angle:id167 @angle:type1 $atom:CG2O3 $atom:CG321_24 $atom:HGA2_50
+  $angle:id168 @angle:type12 $atom:HGA2_49 $atom:CG321_24 $atom:HGA2_50
+  $angle:id169 @angle:type3 $atom:CG321_24 $atom:CG2O3 $atom:OG2D2_1
+  $angle:id170 @angle:type3 $atom:CG321_24 $atom:CG2O3 $atom:OG2D2_2
+  $angle:id171 @angle:type16 $atom:OG2D2_1 $atom:CG2O3 $atom:OG2D2_2
+}
+
+write("Data Dihedrals") {
+  $dihedral:id1 @dihedral:type13 $atom:HGP2_1 $atom:NG3P3 $atom:CG324 $atom:HGA2_1
+  $dihedral:id2 @dihedral:type13 $atom:HGP2_1 $atom:NG3P3 $atom:CG324 $atom:HGA2_2
+  $dihedral:id3 @dihedral:type13 $atom:HGP2_2 $atom:NG3P3 $atom:CG324 $atom:HGA2_1
+  $dihedral:id4 @dihedral:type13 $atom:HGP2_2 $atom:NG3P3 $atom:CG324 $atom:HGA2_2
+  $dihedral:id5 @dihedral:type13 $atom:HGP2_3 $atom:NG3P3 $atom:CG324 $atom:HGA2_1
+  $dihedral:id6 @dihedral:type13 $atom:HGP2_3 $atom:NG3P3 $atom:CG324 $atom:HGA2_2
+  $dihedral:id7 @dihedral:type5 $atom:CG321_1 $atom:CG324 $atom:NG3P3 $atom:HGP2_1
+  $dihedral:id8 @dihedral:type5 $atom:CG321_1 $atom:CG324 $atom:NG3P3 $atom:HGP2_2
+  $dihedral:id9 @dihedral:type5 $atom:CG321_1 $atom:CG324 $atom:NG3P3 $atom:HGP2_3
+  $dihedral:id10 @dihedral:type20 $atom:NG3P3 $atom:CG324 $atom:CG321_1 $atom:OG301_1
+  $dihedral:id11 @dihedral:type11 $atom:NG3P3 $atom:CG324 $atom:CG321_1 $atom:HGA2_3
+  $dihedral:id12 @dihedral:type11 $atom:NG3P3 $atom:CG324 $atom:CG321_1 $atom:HGA2_4
+  $dihedral:id13 @dihedral:type10 $atom:HGA2_1 $atom:CG324 $atom:CG321_1 $atom:HGA2_3
+  $dihedral:id14 @dihedral:type10 $atom:HGA2_1 $atom:CG324 $atom:CG321_1 $atom:HGA2_4
+  $dihedral:id15 @dihedral:type10 $atom:HGA2_2 $atom:CG324 $atom:CG321_1 $atom:HGA2_3
+  $dihedral:id16 @dihedral:type10 $atom:HGA2_2 $atom:CG324 $atom:CG321_1 $atom:HGA2_4
+  $dihedral:id17 @dihedral:type19 $atom:OG301_1 $atom:CG321_1 $atom:CG324 $atom:HGA2_1
+  $dihedral:id18 @dihedral:type19 $atom:OG301_1 $atom:CG321_1 $atom:CG324 $atom:HGA2_2
+  $dihedral:id19 @dihedral:type6 $atom:CG324 $atom:CG321_1 $atom:OG301_1 $atom:CG321_2
+  $dihedral:id20 @dihedral:type7 $atom:CG324 $atom:CG321_1 $atom:OG301_1 $atom:CG321_2
+  $dihedral:id21 @dihedral:type8 $atom:CG324 $atom:CG321_1 $atom:OG301_1 $atom:CG321_2
+  $dihedral:id22 @dihedral:type12 $atom:CG321_2 $atom:OG301_1 $atom:CG321_1 $atom:HGA2_3
+  $dihedral:id23 @dihedral:type12 $atom:CG321_2 $atom:OG301_1 $atom:CG321_1 $atom:HGA2_4
+  $dihedral:id24 @dihedral:type2 $atom:CG321_1 $atom:OG301_1 $atom:CG321_2 $atom:CG321_3
+  $dihedral:id25 @dihedral:type3 $atom:CG321_1 $atom:OG301_1 $atom:CG321_2 $atom:CG321_3
+  $dihedral:id26 @dihedral:type4 $atom:CG321_1 $atom:OG301_1 $atom:CG321_2 $atom:CG321_3
+  $dihedral:id27 @dihedral:type12 $atom:CG321_1 $atom:OG301_1 $atom:CG321_2 $atom:HGA2_5
+  $dihedral:id28 @dihedral:type12 $atom:CG321_1 $atom:OG301_1 $atom:CG321_2 $atom:HGA2_6
+  $dihedral:id29 @dihedral:type17 $atom:OG301_1 $atom:CG321_2 $atom:CG321_3 $atom:OG301_2
+  $dihedral:id30 @dihedral:type18 $atom:OG301_1 $atom:CG321_2 $atom:CG321_3 $atom:OG301_2
+  $dihedral:id31 @dihedral:type16 $atom:OG301_1 $atom:CG321_2 $atom:CG321_3 $atom:HGA2_7
+  $dihedral:id32 @dihedral:type16 $atom:OG301_1 $atom:CG321_2 $atom:CG321_3 $atom:HGA2_8
+  $dihedral:id33 @dihedral:type9 $atom:HGA2_5 $atom:CG321_2 $atom:CG321_3 $atom:HGA2_7
+  $dihedral:id34 @dihedral:type9 $atom:HGA2_5 $atom:CG321_2 $atom:CG321_3 $atom:HGA2_8
+  $dihedral:id35 @dihedral:type9 $atom:HGA2_6 $atom:CG321_2 $atom:CG321_3 $atom:HGA2_7
+  $dihedral:id36 @dihedral:type9 $atom:HGA2_6 $atom:CG321_2 $atom:CG321_3 $atom:HGA2_8
+  $dihedral:id37 @dihedral:type16 $atom:OG301_2 $atom:CG321_3 $atom:CG321_2 $atom:HGA2_5
+  $dihedral:id38 @dihedral:type16 $atom:OG301_2 $atom:CG321_3 $atom:CG321_2 $atom:HGA2_6
+  $dihedral:id39 @dihedral:type2 $atom:CG321_2 $atom:CG321_3 $atom:OG301_2 $atom:CG321_4
+  $dihedral:id40 @dihedral:type3 $atom:CG321_2 $atom:CG321_3 $atom:OG301_2 $atom:CG321_4
+  $dihedral:id41 @dihedral:type4 $atom:CG321_2 $atom:CG321_3 $atom:OG301_2 $atom:CG321_4
+  $dihedral:id42 @dihedral:type12 $atom:CG321_4 $atom:OG301_2 $atom:CG321_3 $atom:HGA2_7
+  $dihedral:id43 @dihedral:type12 $atom:CG321_4 $atom:OG301_2 $atom:CG321_3 $atom:HGA2_8
+  $dihedral:id44 @dihedral:type2 $atom:CG321_3 $atom:OG301_2 $atom:CG321_4 $atom:CG321_5
+  $dihedral:id45 @dihedral:type3 $atom:CG321_3 $atom:OG301_2 $atom:CG321_4 $atom:CG321_5
+  $dihedral:id46 @dihedral:type4 $atom:CG321_3 $atom:OG301_2 $atom:CG321_4 $atom:CG321_5
+  $dihedral:id47 @dihedral:type12 $atom:CG321_3 $atom:OG301_2 $atom:CG321_4 $atom:HGA2_9
+  $dihedral:id48 @dihedral:type12 $atom:CG321_3 $atom:OG301_2 $atom:CG321_4 $atom:HGA2_10
+  $dihedral:id49 @dihedral:type17 $atom:OG301_2 $atom:CG321_4 $atom:CG321_5 $atom:OG301_3
+  $dihedral:id50 @dihedral:type18 $atom:OG301_2 $atom:CG321_4 $atom:CG321_5 $atom:OG301_3
+  $dihedral:id51 @dihedral:type16 $atom:OG301_2 $atom:CG321_4 $atom:CG321_5 $atom:HGA2_11
+  $dihedral:id52 @dihedral:type16 $atom:OG301_2 $atom:CG321_4 $atom:CG321_5 $atom:HGA2_12
+  $dihedral:id53 @dihedral:type9 $atom:HGA2_9 $atom:CG321_4 $atom:CG321_5 $atom:HGA2_11
+  $dihedral:id54 @dihedral:type9 $atom:HGA2_9 $atom:CG321_4 $atom:CG321_5 $atom:HGA2_12
+  $dihedral:id55 @dihedral:type9 $atom:HGA2_10 $atom:CG321_4 $atom:CG321_5 $atom:HGA2_11
+  $dihedral:id56 @dihedral:type9 $atom:HGA2_10 $atom:CG321_4 $atom:CG321_5 $atom:HGA2_12
+  $dihedral:id57 @dihedral:type16 $atom:OG301_3 $atom:CG321_5 $atom:CG321_4 $atom:HGA2_9
+  $dihedral:id58 @dihedral:type16 $atom:OG301_3 $atom:CG321_5 $atom:CG321_4 $atom:HGA2_10
+  $dihedral:id59 @dihedral:type2 $atom:CG321_4 $atom:CG321_5 $atom:OG301_3 $atom:CG321_6
+  $dihedral:id60 @dihedral:type3 $atom:CG321_4 $atom:CG321_5 $atom:OG301_3 $atom:CG321_6
+  $dihedral:id61 @dihedral:type4 $atom:CG321_4 $atom:CG321_5 $atom:OG301_3 $atom:CG321_6
+  $dihedral:id62 @dihedral:type12 $atom:CG321_6 $atom:OG301_3 $atom:CG321_5 $atom:HGA2_11
+  $dihedral:id63 @dihedral:type12 $atom:CG321_6 $atom:OG301_3 $atom:CG321_5 $atom:HGA2_12
+  $dihedral:id64 @dihedral:type2 $atom:CG321_5 $atom:OG301_3 $atom:CG321_6 $atom:CG321_7
+  $dihedral:id65 @dihedral:type3 $atom:CG321_5 $atom:OG301_3 $atom:CG321_6 $atom:CG321_7
+  $dihedral:id66 @dihedral:type4 $atom:CG321_5 $atom:OG301_3 $atom:CG321_6 $atom:CG321_7
+  $dihedral:id67 @dihedral:type12 $atom:CG321_5 $atom:OG301_3 $atom:CG321_6 $atom:HGA2_13
+  $dihedral:id68 @dihedral:type12 $atom:CG321_5 $atom:OG301_3 $atom:CG321_6 $atom:HGA2_14
+  $dihedral:id69 @dihedral:type17 $atom:OG301_3 $atom:CG321_6 $atom:CG321_7 $atom:OG301_4
+  $dihedral:id70 @dihedral:type18 $atom:OG301_3 $atom:CG321_6 $atom:CG321_7 $atom:OG301_4
+  $dihedral:id71 @dihedral:type16 $atom:OG301_3 $atom:CG321_6 $atom:CG321_7 $atom:HGA2_15
+  $dihedral:id72 @dihedral:type16 $atom:OG301_3 $atom:CG321_6 $atom:CG321_7 $atom:HGA2_16
+  $dihedral:id73 @dihedral:type9 $atom:HGA2_13 $atom:CG321_6 $atom:CG321_7 $atom:HGA2_15
+  $dihedral:id74 @dihedral:type9 $atom:HGA2_13 $atom:CG321_6 $atom:CG321_7 $atom:HGA2_16
+  $dihedral:id75 @dihedral:type9 $atom:HGA2_14 $atom:CG321_6 $atom:CG321_7 $atom:HGA2_15
+  $dihedral:id76 @dihedral:type9 $atom:HGA2_14 $atom:CG321_6 $atom:CG321_7 $atom:HGA2_16
+  $dihedral:id77 @dihedral:type16 $atom:OG301_4 $atom:CG321_7 $atom:CG321_6 $atom:HGA2_13
+  $dihedral:id78 @dihedral:type16 $atom:OG301_4 $atom:CG321_7 $atom:CG321_6 $atom:HGA2_14
+  $dihedral:id79 @dihedral:type2 $atom:CG321_6 $atom:CG321_7 $atom:OG301_4 $atom:CG321_8
+  $dihedral:id80 @dihedral:type3 $atom:CG321_6 $atom:CG321_7 $atom:OG301_4 $atom:CG321_8
+  $dihedral:id81 @dihedral:type4 $atom:CG321_6 $atom:CG321_7 $atom:OG301_4 $atom:CG321_8
+  $dihedral:id82 @dihedral:type12 $atom:CG321_8 $atom:OG301_4 $atom:CG321_7 $atom:HGA2_15
+  $dihedral:id83 @dihedral:type12 $atom:CG321_8 $atom:OG301_4 $atom:CG321_7 $atom:HGA2_16
+  $dihedral:id84 @dihedral:type2 $atom:CG321_7 $atom:OG301_4 $atom:CG321_8 $atom:CG321_9
+  $dihedral:id85 @dihedral:type3 $atom:CG321_7 $atom:OG301_4 $atom:CG321_8 $atom:CG321_9
+  $dihedral:id86 @dihedral:type4 $atom:CG321_7 $atom:OG301_4 $atom:CG321_8 $atom:CG321_9
+  $dihedral:id87 @dihedral:type12 $atom:CG321_7 $atom:OG301_4 $atom:CG321_8 $atom:HGA2_17
+  $dihedral:id88 @dihedral:type12 $atom:CG321_7 $atom:OG301_4 $atom:CG321_8 $atom:HGA2_18
+  $dihedral:id89 @dihedral:type17 $atom:OG301_4 $atom:CG321_8 $atom:CG321_9 $atom:OG301_5
+  $dihedral:id90 @dihedral:type18 $atom:OG301_4 $atom:CG321_8 $atom:CG321_9 $atom:OG301_5
+  $dihedral:id91 @dihedral:type16 $atom:OG301_4 $atom:CG321_8 $atom:CG321_9 $atom:HGA2_19
+  $dihedral:id92 @dihedral:type16 $atom:OG301_4 $atom:CG321_8 $atom:CG321_9 $atom:HGA2_20
+  $dihedral:id93 @dihedral:type9 $atom:HGA2_17 $atom:CG321_8 $atom:CG321_9 $atom:HGA2_19
+  $dihedral:id94 @dihedral:type9 $atom:HGA2_17 $atom:CG321_8 $atom:CG321_9 $atom:HGA2_20
+  $dihedral:id95 @dihedral:type9 $atom:HGA2_18 $atom:CG321_8 $atom:CG321_9 $atom:HGA2_19
+  $dihedral:id96 @dihedral:type9 $atom:HGA2_18 $atom:CG321_8 $atom:CG321_9 $atom:HGA2_20
+  $dihedral:id97 @dihedral:type16 $atom:OG301_5 $atom:CG321_9 $atom:CG321_8 $atom:HGA2_17
+  $dihedral:id98 @dihedral:type16 $atom:OG301_5 $atom:CG321_9 $atom:CG321_8 $atom:HGA2_18
+  $dihedral:id99 @dihedral:type2 $atom:CG321_8 $atom:CG321_9 $atom:OG301_5 $atom:CG321_10
+  $dihedral:id100 @dihedral:type3 $atom:CG321_8 $atom:CG321_9 $atom:OG301_5 $atom:CG321_10
+  $dihedral:id101 @dihedral:type4 $atom:CG321_8 $atom:CG321_9 $atom:OG301_5 $atom:CG321_10
+  $dihedral:id102 @dihedral:type12 $atom:CG321_10 $atom:OG301_5 $atom:CG321_9 $atom:HGA2_19
+  $dihedral:id103 @dihedral:type12 $atom:CG321_10 $atom:OG301_5 $atom:CG321_9 $atom:HGA2_20
+  $dihedral:id104 @dihedral:type2 $atom:CG321_9 $atom:OG301_5 $atom:CG321_10 $atom:CG321_11
+  $dihedral:id105 @dihedral:type3 $atom:CG321_9 $atom:OG301_5 $atom:CG321_10 $atom:CG321_11
+  $dihedral:id106 @dihedral:type4 $atom:CG321_9 $atom:OG301_5 $atom:CG321_10 $atom:CG321_11
+  $dihedral:id107 @dihedral:type12 $atom:CG321_9 $atom:OG301_5 $atom:CG321_10 $atom:HGA2_21
+  $dihedral:id108 @dihedral:type12 $atom:CG321_9 $atom:OG301_5 $atom:CG321_10 $atom:HGA2_22
+  $dihedral:id109 @dihedral:type17 $atom:OG301_5 $atom:CG321_10 $atom:CG321_11 $atom:OG301_6
+  $dihedral:id110 @dihedral:type18 $atom:OG301_5 $atom:CG321_10 $atom:CG321_11 $atom:OG301_6
+  $dihedral:id111 @dihedral:type16 $atom:OG301_5 $atom:CG321_10 $atom:CG321_11 $atom:HGA2_23
+  $dihedral:id112 @dihedral:type16 $atom:OG301_5 $atom:CG321_10 $atom:CG321_11 $atom:HGA2_24
+  $dihedral:id113 @dihedral:type9 $atom:HGA2_21 $atom:CG321_10 $atom:CG321_11 $atom:HGA2_23
+  $dihedral:id114 @dihedral:type9 $atom:HGA2_21 $atom:CG321_10 $atom:CG321_11 $atom:HGA2_24
+  $dihedral:id115 @dihedral:type9 $atom:HGA2_22 $atom:CG321_10 $atom:CG321_11 $atom:HGA2_23
+  $dihedral:id116 @dihedral:type9 $atom:HGA2_22 $atom:CG321_10 $atom:CG321_11 $atom:HGA2_24
+  $dihedral:id117 @dihedral:type16 $atom:OG301_6 $atom:CG321_11 $atom:CG321_10 $atom:HGA2_21
+  $dihedral:id118 @dihedral:type16 $atom:OG301_6 $atom:CG321_11 $atom:CG321_10 $atom:HGA2_22
+  $dihedral:id119 @dihedral:type2 $atom:CG321_10 $atom:CG321_11 $atom:OG301_6 $atom:CG321_12
+  $dihedral:id120 @dihedral:type3 $atom:CG321_10 $atom:CG321_11 $atom:OG301_6 $atom:CG321_12
+  $dihedral:id121 @dihedral:type4 $atom:CG321_10 $atom:CG321_11 $atom:OG301_6 $atom:CG321_12
+  $dihedral:id122 @dihedral:type12 $atom:CG321_12 $atom:OG301_6 $atom:CG321_11 $atom:HGA2_23
+  $dihedral:id123 @dihedral:type12 $atom:CG321_12 $atom:OG301_6 $atom:CG321_11 $atom:HGA2_24
+  $dihedral:id124 @dihedral:type2 $atom:CG321_11 $atom:OG301_6 $atom:CG321_12 $atom:CG321_13
+  $dihedral:id125 @dihedral:type3 $atom:CG321_11 $atom:OG301_6 $atom:CG321_12 $atom:CG321_13
+  $dihedral:id126 @dihedral:type4 $atom:CG321_11 $atom:OG301_6 $atom:CG321_12 $atom:CG321_13
+  $dihedral:id127 @dihedral:type12 $atom:CG321_11 $atom:OG301_6 $atom:CG321_12 $atom:HGA2_25
+  $dihedral:id128 @dihedral:type12 $atom:CG321_11 $atom:OG301_6 $atom:CG321_12 $atom:HGA2_26
+  $dihedral:id129 @dihedral:type17 $atom:OG301_6 $atom:CG321_12 $atom:CG321_13 $atom:OG301_7
+  $dihedral:id130 @dihedral:type18 $atom:OG301_6 $atom:CG321_12 $atom:CG321_13 $atom:OG301_7
+  $dihedral:id131 @dihedral:type16 $atom:OG301_6 $atom:CG321_12 $atom:CG321_13 $atom:HGA2_27
+  $dihedral:id132 @dihedral:type16 $atom:OG301_6 $atom:CG321_12 $atom:CG321_13 $atom:HGA2_28
+  $dihedral:id133 @dihedral:type9 $atom:HGA2_25 $atom:CG321_12 $atom:CG321_13 $atom:HGA2_27
+  $dihedral:id134 @dihedral:type9 $atom:HGA2_25 $atom:CG321_12 $atom:CG321_13 $atom:HGA2_28
+  $dihedral:id135 @dihedral:type9 $atom:HGA2_26 $atom:CG321_12 $atom:CG321_13 $atom:HGA2_27
+  $dihedral:id136 @dihedral:type9 $atom:HGA2_26 $atom:CG321_12 $atom:CG321_13 $atom:HGA2_28
+  $dihedral:id137 @dihedral:type16 $atom:OG301_7 $atom:CG321_13 $atom:CG321_12 $atom:HGA2_25
+  $dihedral:id138 @dihedral:type16 $atom:OG301_7 $atom:CG321_13 $atom:CG321_12 $atom:HGA2_26
+  $dihedral:id139 @dihedral:type2 $atom:CG321_12 $atom:CG321_13 $atom:OG301_7 $atom:CG321_14
+  $dihedral:id140 @dihedral:type3 $atom:CG321_12 $atom:CG321_13 $atom:OG301_7 $atom:CG321_14
+  $dihedral:id141 @dihedral:type4 $atom:CG321_12 $atom:CG321_13 $atom:OG301_7 $atom:CG321_14
+  $dihedral:id142 @dihedral:type12 $atom:CG321_14 $atom:OG301_7 $atom:CG321_13 $atom:HGA2_27
+  $dihedral:id143 @dihedral:type12 $atom:CG321_14 $atom:OG301_7 $atom:CG321_13 $atom:HGA2_28
+  $dihedral:id144 @dihedral:type2 $atom:CG321_13 $atom:OG301_7 $atom:CG321_14 $atom:CG321_15
+  $dihedral:id145 @dihedral:type3 $atom:CG321_13 $atom:OG301_7 $atom:CG321_14 $atom:CG321_15
+  $dihedral:id146 @dihedral:type4 $atom:CG321_13 $atom:OG301_7 $atom:CG321_14 $atom:CG321_15
+  $dihedral:id147 @dihedral:type12 $atom:CG321_13 $atom:OG301_7 $atom:CG321_14 $atom:HGA2_29
+  $dihedral:id148 @dihedral:type12 $atom:CG321_13 $atom:OG301_7 $atom:CG321_14 $atom:HGA2_30
+  $dihedral:id149 @dihedral:type17 $atom:OG301_7 $atom:CG321_14 $atom:CG321_15 $atom:OG301_8
+  $dihedral:id150 @dihedral:type18 $atom:OG301_7 $atom:CG321_14 $atom:CG321_15 $atom:OG301_8
+  $dihedral:id151 @dihedral:type16 $atom:OG301_7 $atom:CG321_14 $atom:CG321_15 $atom:HGA2_31
+  $dihedral:id152 @dihedral:type16 $atom:OG301_7 $atom:CG321_14 $atom:CG321_15 $atom:HGA2_32
+  $dihedral:id153 @dihedral:type9 $atom:HGA2_29 $atom:CG321_14 $atom:CG321_15 $atom:HGA2_31
+  $dihedral:id154 @dihedral:type9 $atom:HGA2_29 $atom:CG321_14 $atom:CG321_15 $atom:HGA2_32
+  $dihedral:id155 @dihedral:type9 $atom:HGA2_30 $atom:CG321_14 $atom:CG321_15 $atom:HGA2_31
+  $dihedral:id156 @dihedral:type9 $atom:HGA2_30 $atom:CG321_14 $atom:CG321_15 $atom:HGA2_32
+  $dihedral:id157 @dihedral:type16 $atom:OG301_8 $atom:CG321_15 $atom:CG321_14 $atom:HGA2_29
+  $dihedral:id158 @dihedral:type16 $atom:OG301_8 $atom:CG321_15 $atom:CG321_14 $atom:HGA2_30
+  $dihedral:id159 @dihedral:type2 $atom:CG321_14 $atom:CG321_15 $atom:OG301_8 $atom:CG321_16
+  $dihedral:id160 @dihedral:type3 $atom:CG321_14 $atom:CG321_15 $atom:OG301_8 $atom:CG321_16
+  $dihedral:id161 @dihedral:type4 $atom:CG321_14 $atom:CG321_15 $atom:OG301_8 $atom:CG321_16
+  $dihedral:id162 @dihedral:type12 $atom:CG321_16 $atom:OG301_8 $atom:CG321_15 $atom:HGA2_31
+  $dihedral:id163 @dihedral:type12 $atom:CG321_16 $atom:OG301_8 $atom:CG321_15 $atom:HGA2_32
+  $dihedral:id164 @dihedral:type2 $atom:CG321_15 $atom:OG301_8 $atom:CG321_16 $atom:CG321_17
+  $dihedral:id165 @dihedral:type3 $atom:CG321_15 $atom:OG301_8 $atom:CG321_16 $atom:CG321_17
+  $dihedral:id166 @dihedral:type4 $atom:CG321_15 $atom:OG301_8 $atom:CG321_16 $atom:CG321_17
+  $dihedral:id167 @dihedral:type12 $atom:CG321_15 $atom:OG301_8 $atom:CG321_16 $atom:HGA2_33
+  $dihedral:id168 @dihedral:type12 $atom:CG321_15 $atom:OG301_8 $atom:CG321_16 $atom:HGA2_34
+  $dihedral:id169 @dihedral:type17 $atom:OG301_8 $atom:CG321_16 $atom:CG321_17 $atom:OG301_9
+  $dihedral:id170 @dihedral:type18 $atom:OG301_8 $atom:CG321_16 $atom:CG321_17 $atom:OG301_9
+  $dihedral:id171 @dihedral:type16 $atom:OG301_8 $atom:CG321_16 $atom:CG321_17 $atom:HGA2_35
+  $dihedral:id172 @dihedral:type16 $atom:OG301_8 $atom:CG321_16 $atom:CG321_17 $atom:HGA2_36
+  $dihedral:id173 @dihedral:type9 $atom:HGA2_33 $atom:CG321_16 $atom:CG321_17 $atom:HGA2_35
+  $dihedral:id174 @dihedral:type9 $atom:HGA2_33 $atom:CG321_16 $atom:CG321_17 $atom:HGA2_36
+  $dihedral:id175 @dihedral:type9 $atom:HGA2_34 $atom:CG321_16 $atom:CG321_17 $atom:HGA2_35
+  $dihedral:id176 @dihedral:type9 $atom:HGA2_34 $atom:CG321_16 $atom:CG321_17 $atom:HGA2_36
+  $dihedral:id177 @dihedral:type16 $atom:OG301_9 $atom:CG321_17 $atom:CG321_16 $atom:HGA2_33
+  $dihedral:id178 @dihedral:type16 $atom:OG301_9 $atom:CG321_17 $atom:CG321_16 $atom:HGA2_34
+  $dihedral:id179 @dihedral:type2 $atom:CG321_16 $atom:CG321_17 $atom:OG301_9 $atom:CG321_18
+  $dihedral:id180 @dihedral:type3 $atom:CG321_16 $atom:CG321_17 $atom:OG301_9 $atom:CG321_18
+  $dihedral:id181 @dihedral:type4 $atom:CG321_16 $atom:CG321_17 $atom:OG301_9 $atom:CG321_18
+  $dihedral:id182 @dihedral:type12 $atom:CG321_18 $atom:OG301_9 $atom:CG321_17 $atom:HGA2_35
+  $dihedral:id183 @dihedral:type12 $atom:CG321_18 $atom:OG301_9 $atom:CG321_17 $atom:HGA2_36
+  $dihedral:id184 @dihedral:type2 $atom:CG321_17 $atom:OG301_9 $atom:CG321_18 $atom:CG321_19
+  $dihedral:id185 @dihedral:type3 $atom:CG321_17 $atom:OG301_9 $atom:CG321_18 $atom:CG321_19
+  $dihedral:id186 @dihedral:type4 $atom:CG321_17 $atom:OG301_9 $atom:CG321_18 $atom:CG321_19
+  $dihedral:id187 @dihedral:type12 $atom:CG321_17 $atom:OG301_9 $atom:CG321_18 $atom:HGA2_37
+  $dihedral:id188 @dihedral:type12 $atom:CG321_17 $atom:OG301_9 $atom:CG321_18 $atom:HGA2_38
+  $dihedral:id189 @dihedral:type17 $atom:OG301_9 $atom:CG321_18 $atom:CG321_19 $atom:OG301_10
+  $dihedral:id190 @dihedral:type18 $atom:OG301_9 $atom:CG321_18 $atom:CG321_19 $atom:OG301_10
+  $dihedral:id191 @dihedral:type16 $atom:OG301_9 $atom:CG321_18 $atom:CG321_19 $atom:HGA2_39
+  $dihedral:id192 @dihedral:type16 $atom:OG301_9 $atom:CG321_18 $atom:CG321_19 $atom:HGA2_40
+  $dihedral:id193 @dihedral:type9 $atom:HGA2_37 $atom:CG321_18 $atom:CG321_19 $atom:HGA2_39
+  $dihedral:id194 @dihedral:type9 $atom:HGA2_37 $atom:CG321_18 $atom:CG321_19 $atom:HGA2_40
+  $dihedral:id195 @dihedral:type9 $atom:HGA2_38 $atom:CG321_18 $atom:CG321_19 $atom:HGA2_39
+  $dihedral:id196 @dihedral:type9 $atom:HGA2_38 $atom:CG321_18 $atom:CG321_19 $atom:HGA2_40
+  $dihedral:id197 @dihedral:type16 $atom:OG301_10 $atom:CG321_19 $atom:CG321_18 $atom:HGA2_37
+  $dihedral:id198 @dihedral:type16 $atom:OG301_10 $atom:CG321_19 $atom:CG321_18 $atom:HGA2_38
+  $dihedral:id199 @dihedral:type2 $atom:CG321_18 $atom:CG321_19 $atom:OG301_10 $atom:CG321_20
+  $dihedral:id200 @dihedral:type3 $atom:CG321_18 $atom:CG321_19 $atom:OG301_10 $atom:CG321_20
+  $dihedral:id201 @dihedral:type4 $atom:CG321_18 $atom:CG321_19 $atom:OG301_10 $atom:CG321_20
+  $dihedral:id202 @dihedral:type12 $atom:CG321_20 $atom:OG301_10 $atom:CG321_19 $atom:HGA2_39
+  $dihedral:id203 @dihedral:type12 $atom:CG321_20 $atom:OG301_10 $atom:CG321_19 $atom:HGA2_40
+  $dihedral:id204 @dihedral:type2 $atom:CG321_19 $atom:OG301_10 $atom:CG321_20 $atom:CG321_21
+  $dihedral:id205 @dihedral:type3 $atom:CG321_19 $atom:OG301_10 $atom:CG321_20 $atom:CG321_21
+  $dihedral:id206 @dihedral:type4 $atom:CG321_19 $atom:OG301_10 $atom:CG321_20 $atom:CG321_21
+  $dihedral:id207 @dihedral:type12 $atom:CG321_19 $atom:OG301_10 $atom:CG321_20 $atom:HGA2_41
+  $dihedral:id208 @dihedral:type12 $atom:CG321_19 $atom:OG301_10 $atom:CG321_20 $atom:HGA2_42
+  $dihedral:id209 @dihedral:type17 $atom:OG301_10 $atom:CG321_20 $atom:CG321_21 $atom:OG301_11
+  $dihedral:id210 @dihedral:type18 $atom:OG301_10 $atom:CG321_20 $atom:CG321_21 $atom:OG301_11
+  $dihedral:id211 @dihedral:type16 $atom:OG301_10 $atom:CG321_20 $atom:CG321_21 $atom:HGA2_43
+  $dihedral:id212 @dihedral:type16 $atom:OG301_10 $atom:CG321_20 $atom:CG321_21 $atom:HGA2_44
+  $dihedral:id213 @dihedral:type9 $atom:HGA2_41 $atom:CG321_20 $atom:CG321_21 $atom:HGA2_43
+  $dihedral:id214 @dihedral:type9 $atom:HGA2_41 $atom:CG321_20 $atom:CG321_21 $atom:HGA2_44
+  $dihedral:id215 @dihedral:type9 $atom:HGA2_42 $atom:CG321_20 $atom:CG321_21 $atom:HGA2_43
+  $dihedral:id216 @dihedral:type9 $atom:HGA2_42 $atom:CG321_20 $atom:CG321_21 $atom:HGA2_44
+  $dihedral:id217 @dihedral:type16 $atom:OG301_11 $atom:CG321_21 $atom:CG321_20 $atom:HGA2_41
+  $dihedral:id218 @dihedral:type16 $atom:OG301_11 $atom:CG321_21 $atom:CG321_20 $atom:HGA2_42
+  $dihedral:id219 @dihedral:type2 $atom:CG321_20 $atom:CG321_21 $atom:OG301_11 $atom:CG321_22
+  $dihedral:id220 @dihedral:type3 $atom:CG321_20 $atom:CG321_21 $atom:OG301_11 $atom:CG321_22
+  $dihedral:id221 @dihedral:type4 $atom:CG321_20 $atom:CG321_21 $atom:OG301_11 $atom:CG321_22
+  $dihedral:id222 @dihedral:type12 $atom:CG321_22 $atom:OG301_11 $atom:CG321_21 $atom:HGA2_43
+  $dihedral:id223 @dihedral:type12 $atom:CG321_22 $atom:OG301_11 $atom:CG321_21 $atom:HGA2_44
+  $dihedral:id224 @dihedral:type2 $atom:CG321_21 $atom:OG301_11 $atom:CG321_22 $atom:CG321_23
+  $dihedral:id225 @dihedral:type3 $atom:CG321_21 $atom:OG301_11 $atom:CG321_22 $atom:CG321_23
+  $dihedral:id226 @dihedral:type4 $atom:CG321_21 $atom:OG301_11 $atom:CG321_22 $atom:CG321_23
+  $dihedral:id227 @dihedral:type12 $atom:CG321_21 $atom:OG301_11 $atom:CG321_22 $atom:HGA2_45
+  $dihedral:id228 @dihedral:type12 $atom:CG321_21 $atom:OG301_11 $atom:CG321_22 $atom:HGA2_46
+  $dihedral:id229 @dihedral:type17 $atom:OG301_11 $atom:CG321_22 $atom:CG321_23 $atom:OG301_12
+  $dihedral:id230 @dihedral:type18 $atom:OG301_11 $atom:CG321_22 $atom:CG321_23 $atom:OG301_12
+  $dihedral:id231 @dihedral:type16 $atom:OG301_11 $atom:CG321_22 $atom:CG321_23 $atom:HGA2_47
+  $dihedral:id232 @dihedral:type16 $atom:OG301_11 $atom:CG321_22 $atom:CG321_23 $atom:HGA2_48
+  $dihedral:id233 @dihedral:type9 $atom:HGA2_45 $atom:CG321_22 $atom:CG321_23 $atom:HGA2_47
+  $dihedral:id234 @dihedral:type9 $atom:HGA2_45 $atom:CG321_22 $atom:CG321_23 $atom:HGA2_48
+  $dihedral:id235 @dihedral:type9 $atom:HGA2_46 $atom:CG321_22 $atom:CG321_23 $atom:HGA2_47
+  $dihedral:id236 @dihedral:type9 $atom:HGA2_46 $atom:CG321_22 $atom:CG321_23 $atom:HGA2_48
+  $dihedral:id237 @dihedral:type16 $atom:OG301_12 $atom:CG321_23 $atom:CG321_22 $atom:HGA2_45
+  $dihedral:id238 @dihedral:type16 $atom:OG301_12 $atom:CG321_23 $atom:CG321_22 $atom:HGA2_46
+  $dihedral:id239 @dihedral:type2 $atom:CG321_22 $atom:CG321_23 $atom:OG301_12 $atom:CG321_24
+  $dihedral:id240 @dihedral:type3 $atom:CG321_22 $atom:CG321_23 $atom:OG301_12 $atom:CG321_24
+  $dihedral:id241 @dihedral:type4 $atom:CG321_22 $atom:CG321_23 $atom:OG301_12 $atom:CG321_24
+  $dihedral:id242 @dihedral:type12 $atom:CG321_24 $atom:OG301_12 $atom:CG321_23 $atom:HGA2_47
+  $dihedral:id243 @dihedral:type12 $atom:CG321_24 $atom:OG301_12 $atom:CG321_23 $atom:HGA2_48
+  $dihedral:id244 @dihedral:type1 $atom:CG321_23 $atom:OG301_12 $atom:CG321_24 $atom:CG2O3
+  $dihedral:id245 @dihedral:type12 $atom:CG321_23 $atom:OG301_12 $atom:CG321_24 $atom:HGA2_49
+  $dihedral:id246 @dihedral:type12 $atom:CG321_23 $atom:OG301_12 $atom:CG321_24 $atom:HGA2_50
+  $dihedral:id247 @dihedral:type15 $atom:OG301_12 $atom:CG321_24 $atom:CG2O3 $atom:OG2D2_1
+  $dihedral:id248 @dihedral:type15 $atom:OG301_12 $atom:CG321_24 $atom:CG2O3 $atom:OG2D2_2
+  $dihedral:id249 @dihedral:type14 $atom:OG2D2_1 $atom:CG2O3 $atom:CG321_24 $atom:HGA2_49
+  $dihedral:id250 @dihedral:type14 $atom:OG2D2_1 $atom:CG2O3 $atom:CG321_24 $atom:HGA2_50
+  $dihedral:id251 @dihedral:type14 $atom:OG2D2_2 $atom:CG2O3 $atom:CG321_24 $atom:HGA2_49
+  $dihedral:id252 @dihedral:type14 $atom:OG2D2_2 $atom:CG2O3 $atom:CG321_24 $atom:HGA2_50
+}
+
+write("Data Impropers") {
+  $improper:id1 @improper:type1 $atom:CG2O3 $atom:OG2D2_1 $atom:OG2D2_2 $atom:CG321_24
+}
+}
